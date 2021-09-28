@@ -1,3 +1,11 @@
+<style type="text/css">
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+
 <div class="container">
   <% @places.each do |place| %>
     <div class="booyah-box col-md-10 col-md-offset-1">
@@ -7,3 +15,11 @@
     </div>
   <% end %>
 </div>
+
+<div id="footer" class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @places %>
+    </div>
+    <%= will_paginate @places, :container => false %>
+</div>
+
